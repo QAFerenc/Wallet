@@ -23,9 +23,11 @@ namespace Betsson.OnlineWallets.Tests
         public void Get_Balance()
         {
 
-            // use reflexion
-
-            var type = typeof(OnlineWalletService);
+            // use Reflexion
+             
+            //idea 1. : idea 2. seems to be better below
+            
+            /*var type = typeof(OnlineWalletService);
             var myMethod = type.GetMethod("GetBalanceAsync");
 
 
@@ -33,14 +35,14 @@ namespace Betsson.OnlineWallets.Tests
 
             MemberInfo[] members = class1Type.GetMembers();
 
-            MemberInfo[] field = class1Type.GetMember("GetBalanceAsync", BindingFlags.NonPublic | BindingFlags.Instance);
-            field.inv.GetBalanceAsync;            
+            MemberInfo[] field = class1Type.GetMember("GetBalanceAsync", BindingFlags.NonPublic | BindingFlags.Instance);           
+            */
 
-            // following command fails, as the class does not have constructior with zero parameter         
+            //idea 2.
+            
+            // following command fails, as the class does not have constructor with zero parameter         
             var initiatedObject = Activator.CreateInstance<OnlineWalletService>();
             
-         
-            Console.WriteLine("Hello World !");
             Console.WriteLine(myMethod.Invoke(initiatedObject,null));
 
 
