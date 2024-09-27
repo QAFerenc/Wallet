@@ -20,9 +20,10 @@ namespace Betsson.OnlineWallets.Tests
         }
 
         [Test]
-        public void Test1()
+        public void Get_Balance()
         {
 
+            // use reflexion
 
             var type = typeof(OnlineWalletService);
             var myMethod = type.GetMethod("GetBalanceAsync");
@@ -35,7 +36,8 @@ namespace Betsson.OnlineWallets.Tests
             MemberInfo[] field = class1Type.GetMember("GetBalanceAsync", BindingFlags.NonPublic | BindingFlags.Instance);
             
 
-         
+            // following command fails         
+            
             var initiatedObject = Activator.CreateInstance<OnlineWalletService>();
             
          
