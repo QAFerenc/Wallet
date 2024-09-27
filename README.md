@@ -14,11 +14,15 @@ Steps to run the Application (steps 1. and 2. are written in the original Task d
 
     Now the Application is running
 
-3. The API tests are located in
+3. The API tests are located in file
 
    Betsson.OnlineWallets.Tests\APITTests.cs
 
    Operations "GetBalance", "Send money to Wallet", "Withdraw money" are targeted
 
 4. After right mouse clicking on file "APITests.cs", one can run the API tests with Visual Studio Code's Run Tests options
+
+5. The Unit tests are located in file
+
+   Betsson.OnlineWallets.Tests\UnitTests.cs
    
