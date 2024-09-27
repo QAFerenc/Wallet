@@ -1,4 +1,4 @@
-  using NUnit.Framework;
+using NUnit.Framework;
 using Betsson.OnlineWallets.Services;
 using Betsson.OnlineWallets.Models;
 using RestSharp;
@@ -34,10 +34,9 @@ namespace Betsson.OnlineWallets.Tests
             MemberInfo[] members = class1Type.GetMembers();
 
             MemberInfo[] field = class1Type.GetMember("GetBalanceAsync", BindingFlags.NonPublic | BindingFlags.Instance);
-            
+            field.inv.GetBalanceAsync;            
 
-            // following command fails         
-            
+            // following command fails, as the class does not have constructior with zero parameter         
             var initiatedObject = Activator.CreateInstance<OnlineWalletService>();
             
          
